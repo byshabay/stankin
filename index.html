@@ -7,14 +7,21 @@
     <title>Генератор паролей</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/icon.png">
+    <script type="text/javascript">
+        function transformString(color, str, symbol){
+        return color.substr(0, 1) + str.split(' ').map(word=>`${word.substring(0,1)}${symbol.substr(0, 1)}`).join('');
+        }
+        </script>
 </head>
 <body>
+    
     <header class="header">
         <div class="header__conteiner">
             <div class="header__menu">
-                <a class="header__menu-a" href="#">важная информация</a>
-                <a class="header__menu-a" href="#">практические рекомендации</a>
-                <a class="header__gen-pass-btn header__menu-a"href="#">генератор пароля</a>
+                <a href="https://mospolytech.ru/" class="header__mpu"><img src="img/mpu.png" alt="политех лого" class="header__mpu-logo"></a>
+                <a class="header__menu-a" href="#important">важная информация</a>
+                <a class="header__menu-a" href="#inf">практические рекомендации</a>
+                <a class="header__gen-pass-btn header__menu-a"href="#form">генератор пароля</a>
             </div>
             <div class="header__h">
                 <h1 class="header__h1">КАК ОБЕЗОПАСИТЬ СЕБЯ В СЕТИ?</h1>
@@ -22,18 +29,19 @@
             </div>
         </div>        
     </header>
-    <div class="important">
+    <img src="img/bkg_4.1.png" class="imp-bkg">
+    <div id="important" class="important">
         <h1 class="important__h1">ПОЧЕМУ ПАРОЛЬНАЯ ЗАЩИТА ТАК ВАЖНА?</h1>
-        <div class="important__text-1">Со времен изобретения Интернета мир 
+        <p class="important__text-1">Со времен изобретения Интернета мир 
             сильно изменился. Сейчас, чтобы записаться в поликлинику, 
             заполнить документы или просто договориться о встрече, 
             достаточно нажать пару клавиш и отправить данные в глобальную сеть.  
             Почти каждый из нас имеет <b>цифровые следы</b>, которые успешно 
             используются злоумышленниками. За последние 50 лет мы придумали 
             множество способов обеспечить <b>безопасность персональных данных:</b> 
-            от паролей до криптографических ключей.</div>
+            от паролей до криптографических ключей.</p>
             <img src="img/file.gif" alt="gif" class="gif">
-        <div class="important__text-2">
+        <p class="important__text-2">
             К сожалению, способности хакеров так же не стоят на месте. 
             Сегодня в сети ведется настоящая <b>цифровая война</b>. Мы увеличиваем 
             защиту, а мошенники придумывают все более изощренные способы 
@@ -43,9 +51,117 @@
             а каждый пятый пользователь использует <b>один пароль  ко всем 
             ресурсам</b>, что значительно упрощает работу злоумышленникам. 
             Подобная халатность со стороны пользователей и организаций 
-            способна привести к глобальным последствиям.
-        </div>
+            способна привести к глобальным последствиям.</p>
         <img src="img/bkg_imp_2.png" alt="soc" class="bkg-img-2">
+    </div>
+    <img src="img/bkg_4.2.png" class="pass-bkg">
+    <div id="inf" class="pass-inf">
+        <div class="pass-inf__conteiner">
+            <h1 class="pass-inf__h1">КАКОЙ ПАРОЛЬ СЧИТАЕТСЯ НАДЕЖНЫМ?</h1>
+            <p class="pass-inf__text-1">Пароль является надежным, 
+                если соответствует двум основным принципам, а именно:</p>
+            <div class="pass-inf__second-items-conteiner">
+                <div class="pass-inf__second-items">
+                    <div class="pass-inf__first">
+                        <img src="img/pass-frst.png" alt="1" class="pass-inf__items">
+                        <p class="pass-inf__text-2">В комбинации использованы как 
+                            можно более разнообразные символы (что обеспечивает паролю 
+                            <b>наименьшую предсказуемость</b>)</p>
+                    </div>
+                    <div class="pass-inf__second">
+                        <img src="img/pass-sec.png" alt="2" class="pass-inf__items">
+                        <p class="pass-inf__text-3">Значительная длина пароля 
+                            (<b>12 символов</b> и более)</p>    
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pass-bkg-2">
+            <img src="img/bkg_4.3.png" >
+    </div>
+
+    <div class="pass-2">
+        <div class="pass-2__text-1">Для каждого сервиса или сайта используйте 
+            свой <b>уникальный пароль</b>, чтобы не дать злоумышленнику получить вашу 
+            конфиденциальную информацию из всех источников сразу.
+            <br><br>
+            Надежный пароль совсем не обязательно должен 
+            представлять собой случайную комбинацию
+            символов. Несмотря на то, что такие пароли, безусловно, 
+            оправданы с точки зрения безопасности, не всегда удается быстро 
+            и легко запоминать их. Именно
+            поэтому стоит составить комбинацию, которую <b>просто 
+            выучить</b>, но длиннее.
+            <br><br>   
+            Более того, стоит руководствоваться тем, что пароль 
+            может быть сложным на вид, но совершенно простым для взлома 
+            и хищения ваших  персональных данных.
+                
+                </div>
+        <div class="pass-2__img-1">
+                <img src="img/gif2.gif" alt="гифка2" >
+        </div>
+    </div>
+    
+    <div id="form" class="pass-form">
+        <h1 class="pass-form__h1">КАК СОСТАВИТЬ ХОРОШИЙ ПАРОЛЬ И ЗАПОМНИТЬ ЕГО?</h1>
+        <div class="pass-form__conteiner">
+        <p class="pass-form__text-1">Как правило, зная 
+            правильные подходы и методы, пользователь может <b>запомнить 
+            любую комбинацию букв и знаков</b>. Наиболее эффективным является 
+            ассоциативный метод, например:</p>
+            <form class="pass-form__form" onsubmit="event.preventDefault(); 
+            document.querySelector('#result').innerText=transformString(document.querySelector('#color').value,document.querySelector('#phrase').value, document.querySelector('#symbol').value)">
+                <label for="phrase" class="pass-form__lbl">Фраза, которая 
+                    является для вас значимой (от 5 слов)
+                </label>
+                <input id="phrase" type="text" class="pass-form__inpt">
+                <label for="symbol" class="pass-form__lbl">Специальный символ
+                </label>
+                <input id="symbol" type="text" pattern="[$&+,:;=?@#|'<>.^*()%!-]" class="pass-form__inpt">
+                <label for="color" class="pass-form__lbl">Цвет, который 
+                    ассоциируется с сайтом
+                </label>
+                <input id="color" type="text" pattern="^[a-zA-Z]+$" class="pass-form__inpt">
+                <button type="submit" class="pass-form__btn">Готово!</button>
+            </form>
+            <div class="pass-form__results" id="result"> </div>
+        </div>
+    </div>
+    <div class="pass-form__bkg-conteiner">
+    </div>
+    <div class="alg">
+        <div class="alg__conteiner">
+            <img src="img/gif3.gif" alt="гифка" class="alg__img-1">
+            <p class="alg__text-1">
+                    Таким образом, получаем пароль состоящий из 
+                    <b>первых букв первых пяти слов</b> нашей фразы 
+                    (строка из песни, цитаты из книги, реплики из фильма и т.д.), 
+                    <b>между которыми стоит один специальный символ</b> - запомнить легко!
+                    <br><br>
+                    Чтобы запомнить по одному паролю для каждого сайта,
+                    используйте первую букву слова (или его целиком), с которым <b>ассоциируется у вас
+                    данный сервис</b>, в составляемом вами пароле. (Если о 
+                    социальной сети «Вконтакте» вам напоминает синий цвет, 
+                    тогда вы можете взять слово «blue»)
+                    <br><br>
+                    Дополнив данную комбинацию, вы можете генерировать другие 
+                    <b>исключительные и единственные в своем роде пароли!</b>
+            </p>
+        </div>
+        <footer class="footer">
+            <img src="img/mpu.png" alt="лого политеха" class="mpu">
+            <div class="footer__text-1">
+                <div class="footer__names-all">
+                    <div class="footer__name-1"> Шабайкина А.А.</div>
+                    <div class="footer__name-2">  Усоева А.С.</div>
+                </div>
+                <br>
+                <p class="footer__atn"> Сайт находится в разработке</p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

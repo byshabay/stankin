@@ -23,25 +23,29 @@
     padding: 1% 3%;
     max-width: 330px;
 }
+.header__mpu-logo{
+    width: 100%;
+    margin-top: 6%;
+}
 .header__gen-pass-btn{    
     border: 1px solid #fffefe;
     background-color: rgb(255, 254, 254, 0.1);
+    border-radius: 25px;
 }
 .header__menu{
     display: flex;
-    width: 70%;
-    max-width: 920px;
-    margin-left: 20%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
     justify-content: space-between;
 }
 .header__h{
     margin-left: 52%;
 }
-.header__h1, .important__h1{
-    font-size: calc( (100vw - 350px)/(1280 - 350) * (30 - 20) + 20px);
-}
-.important__h1{
+.header__h1, .important__h1, .pass-inf__h1, .pass-form__h1{
     font-family: 'Ubuntu';
+    font-size: calc( (100vw - 350px)/(1280 - 350) * (30 - 20) + 20px);
 }
 .header__h1{
     margin-top: 26vh;    
@@ -53,13 +57,14 @@
     margin-top: 8%;
     line-height: 1.5;
 }
-.important{
+.important, .pass-inf__conteiner{
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     color: #333333;
+    line-height: 2;
 }
-.important__h1{
+.important__h1, .pass-inf__h1{
     color: #050505;
 }
 .important__text-1{
@@ -82,7 +87,7 @@ b{
     width: 48.6%;
     z-index: -10;
     margin-left: 32.5%;
-    margin-top: -17.5%;
+    margin-top: -24.5%;
     position: absolute;
     max-width: 700px;
 }
@@ -91,33 +96,269 @@ b{
     width: 52.5%;
     position: absolute;
     z-index: -20;
-    margin-top: -35.6%;
+    margin-top: -50.6%;
+}
+
+.imp-bkg{
+    float: left; 
+    margin-top: -5%;
+    position: absolute;    
+}
+.pass-bkg, .imp-bkg, .pass-bkg-2{
+    z-index: -20;   
+   
+}
+.pass-bkg{
+    float: right;
+    margin-top: -5%;
+}
+.pass-inf{
+    margin-top: 5%;
+    padding-left: 5%;
+   /* height: 90vh;*/
+}
+.pass-bkg-2{
+    position: absolute;
+    margin-top: 20%;
+}
+.pass-inf__second-items-conteiner{
+    background-color: #0c0c44;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 2%;
+}
+.pass-inf__second-items{
+    display: flex;
+    width: 83%;
+    max-width: 1200px;
+    color: white;
+    justify-content: space-around;
+    margin: 2% auto;
+    padding-left: 10%;
+}
+.pass-inf__first, .pass-inf__second{
+    display: flex;
+    flex: 0.9;
+    align-items: center;
+}
+.pass-inf__second{
+    flex: 1.1;
+    margin-left: 5%;
+}
+.pass-inf__text-3{
+    width: 40%;
+}
+.pass-inf__h1{
+    /*  float: center;*/
+  }
+  .pass-inf__text-1{
+      font-size: calc( (100vw - 350px)/(1280 - 350) * (18 - 10) + 10px);
+      color: #333333;
+  }
+.pass-2{
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    padding-top: 40vh;
+    /* height: 200vh; */
+    margin: 5% auto 0;
+}
+.pass-2__text-1{
+    width: 45%;
+    z-index: 10;
+    color: #333333;
+    line-height: 1.5;
+    font-size: calc( (100vw - 350px)/(1280 - 350) * (20 - 15) + 15px);
+}
+.pass-2__img-1{
+    z-index: -10;
+    width: 60%;
+    float: right;
+    margin-left: -10%;
+    margin-top: -10%;
+    max-width: 900px;
+}
+.pass-2__img-1 img{
+    width: 100%;
+}
+.pass-form__conteiner{
+    width: 90%;
+    margin: 0 auto;
+}
+.pass-form{
+    background: url("img/brg_5.png") no-repeat;
+    background-size: center;
+    max-width: 1440px;
+    height: 120vh;
+    margin: 1% auto 0;
+    color: #333333;
+    font-size: calc( (100vw - 350px)/(1280 - 350) * (20 - 15) + 15px);
+}
+.pass-form__h1{
+    text-align: center;
+    margin-top: 4%;
+}
+.pass-form__text-1{
+    margin-top: 2%;
+    width: 68%;
+    line-height: 1.5;
+}
+.pass-form__form{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    margin: 2% auto 0;
+    background-color: rgb(255, 255, 255, 0.5);
+    border: 2px black solid;
+    border-radius: 25px;
+    width: 60%;
+}
+.pass-form__lbl{
+    margin-left: 1%;
+}
+.pass-form__inpt{
+    border-radius: 20px;
+    background-color: #d9e2ee;
+    width: 95%;
+    margin: 2% auto;
+    padding-left: 2%;
+    height: 8vh;
+    
+}
+.pass-form__btn{
+    border-radius: 15px;
+    border: none;
+    background-color: #4758a5;
+    text-transform: uppercase;
+    color: white;
+    width: 25%;
+    padding:  0 2%;
+    margin: 1% auto 0 ;
+    height: 7vh;
+    font-size: calc( (100vw - 350px)/(1280 - 350) * (18 - 10) + 10px);  
+}
+.pass-form__bkg-conteiner{
+    background: url("img/bkg_4.4.png") 0 90% no-repeat;
+    background-position: right;
+    margin-top: -20%;
+    z-index: -10;
+    position: absolute;
+    width: 98.7vw;
+    height: 40vh;
+}
+.alg{
+    width: 100%;
+    background-color:#a4b2fd;
+    margin-top: -5%;
+}
+.alg__conteiner{
+    display: flex;
+    max-width: 1440px;
+    width: 90%;
+    padding: 2% 0;
+    margin: 0 auto;
+    align-items: center;
+    color: #333333;
+    line-height: 1.5;
+    font-size: calc( (100vw - 350px)/(1280 - 350) * (18 - 10) + 10px);
+}
+.alg__img-1{
+    width: 50%;
+    max-width: 648px;
+}
+.alg__text-1{
+    width: 45%;
+}
+.footer{
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: #333333;
+    font-size: calc( (100vw - 350px)/(1280 - 350) * (18 - 10) + 10px);
+}
+.mpu{
+    width: 15%;
+    max-width: 208px;
+}
+.footer__names-all{
+    display: flex;
+}
+.footer__name-1{
+    margin-left: -15%;
+}
+.footer__name-2{
+    margin-left: 21%;
+}
+.pass-form__results{
+    width: 56%;
+    text-align: center;
+    height: 20vh;
+    background-color: rgb(255, 254, 254, 0.7);
+    padding-top: 1%;
+    margin: 0 auto;
+    font-size: calc( (100vw - 350px)/(1280 - 350) * (50 - 20) + 20px);
 }
 /*media*/
 @media (min-width:1440px){
-    .header{
+    .header, .pass-2__text-1, .pass-form{
         font-size: 20px;
     }
-    .header__h1, .important__h1{
+    .header__h1, .important__h1, .pass-inf__h1, .pass-form__h1{
         font-size: 30px;
     }
     .header__h4{
         font-size: 27px;
     }
-    .important__text-1, .important__text-2{
+    .important__text-1, .important__text-2, 
+    .pass-inf__text-1, .pass-inf__text-2, .pass-inf__text-3,
+    .pass-form__btn, .alg__text-1, .footer{
         font-size: 18px;
+    }
+    ..pass-2__img-1{
+        margin-top: -300px;
     }
     .gif{
         margin-left: 487px;
-        margin-top: -250px;
+        margin-top: -300px;
+    }
+    .imp-bkg, .pass-bkg, .pass-bkg-2,.pass-form__bkg-conteiner{
+        display: none;
     }
     .bkg-img-2{
-        margin-top: -450px;
+        margin-top: -630px;
     }
+    .imp-bkg{
+        margin-top: -400px;
+    }
+    .pass-bkg{
+       margin-top: 80px;
+    }
+    .pass-bkg-2{
+        margin-top: -150px;
+    }
+    .pass-inf__second-items{
+        padding-left: 300px;
+    }
+    .pass-form__bkg-conteiner{
+        width: 100vw;
+        margin-top: -900px;
+    }
+    .pass-inf__h1{
+        margin-left: 200px;
+    }
+    .pass-form__conteiner{
+        width: 83%;
+    }
+
 }
 @media (max-width:768px){
     .important{
         text-align: justify;
+        margin-top: -10%;
     }
     .important__text-2{
         margin-left: 0;
@@ -135,6 +376,73 @@ b{
     .bkg-img-2{
         display: none;
     }
+    .pass-inf__second-items, .pass-inf__first, .pass-inf__second{
+        flex-direction: column;
+    }
+    .pass-inf__h1{
+        text-align:center;
+        margin-left: 0;
+    }
+    .pass-inf__second-items{
+       /* width: 90%;*/
+        margin: 0 auto;
+        text-align: justify;
+    }
+    .imp-bkg, .pass-bkg, .pass-bkg-2,.pass-form__bkg-conteiner{
+        display: none;
+    }
+    .pass-inf__text-3 {
+        width: 100%; 
+    }
+    .pass-2__text-1{
+        width: 100%;
+    }
+    .pass-2{
+        margin-top: 65vh;
+        padding-top: 70vh;
+    }
+    .pass-form__form{
+        width: 90%;
+    }
+    .alg__conteiner{
+        flex-direction: column;
+    }
+    .alg__img-1{
+        width: 90%;
+    }
+    .alg__text-1{
+        width: 90%;
+    }
+    .pass-inf__second-items{
+        padding-left: 0;
+    }
+    .pass-2__img-1{
+        display: none;
+    }
+    .pass-inf__second-items-conteiner{
+        padding: 3% 0;
+    }
+    .pass-form__text-1 {
+        width: 100%;
+        text-align: justify;
+    }
+    .pass-form{
+        height: 110vh;
+    }
+    .pass-form__results{
+        height: 10vh;
+    }
+}
+@media (max-width: 380px){
+  /*  .pass-inf__second-items-conteiner{
+        padding: 10% 0;
+    }
+    .pass-2{
+        padding-top: 50vh;
+    }
+    .pass-form{
+        height: 93vh;
+    }*/
 }
 /*fonts*/
 @font-face{
